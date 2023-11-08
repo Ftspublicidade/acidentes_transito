@@ -10,8 +10,8 @@ df["vitimas"] = df["vitimas"].str.replace(",", ".").astype(float)
 
 clima = df["tempo_clima"].value_counts().sort_values(ascending=False)
 
-bairro = df["bairro"].value_counts().head(10).reset_index()
-bairro = bairro.sort_values(by="bairro", ascending=True)
+bairro = df["bairro"].value_counts().head(10).sort_values(ascending=True)
+
 
 # alterando coluna de data para datetime
 df["data"] = pd.to_datetime(df["data"])
@@ -46,9 +46,9 @@ def main():
     fig.update_layout(title="Total de acidentes por Clima", title_x=0.1)
     st.plotly_chart(fig)
 
-    fig1 = px.bar(bairro, x="bairro", y="index", text="bairro",
+    fig1 = px.bar(bairro, text=bairro.values,
              color_discrete_sequence=["#FF4500"], orientation="h")
-    fig1.update_layout(title="Top 10 acidentes por Bairro", title_x=0.5)
+    fig1.update_layout(title="Top 10 acidentes por Bairro", title_x=0.1)
     st.plotly_chart(fig1)
 
    
