@@ -52,7 +52,7 @@ def main():
     fig1.update_layout(title="Top 10 acidentes por Bairro", title_x=0.1)
     st.plotly_chart(fig1)
 
-   st.write(total_mes)
+    st.write(total_mes)
     fig2 = px.line(total_mes, x="Mês_Acidente", y="count",
               color_discrete_sequence=["#FF4500"], markers=True,
               text="count", labels={"Mês":"Mês Acidente", "Total":"Total Acidentes"})
