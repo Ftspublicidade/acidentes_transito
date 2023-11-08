@@ -8,7 +8,7 @@ df = pd.read_csv("acidentes2022.csv", on_bad_lines="skip", sep=";")
 df["vitimasfatais"] = df["vitimasfatais"].str.replace(",", ".").astype(float)
 df["vitimas"] = df["vitimas"].str.replace(",", ".").astype(float)
 
-clima = df["tempo_clima"].value_counts().sort_values(ascending=True)
+clima = df["tempo_clima"].value_counts().sort_values(ascending=False)
 
 bairro = df["bairro"].value_counts().head(10).reset_index()
 bairro = bairro.sort_values(by="bairro", ascending=True)
