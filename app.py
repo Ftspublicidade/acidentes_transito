@@ -19,7 +19,7 @@ df["data"] = pd.to_datetime(df["data"])
 # Criando coluna de mês
 df["Mês_Acidente"] = df["data"].dt.month
 
-total_mes = df["Mês_Acidente"].value_counts().reset_index().rename(columns={"index":"Mês", "Mês_Acidente":"Total"}).sort_values(by="Mês", ascending=True)
+total_mes = df["Mês_Acidente"].value_counts().reset_index()
 
 def main():
 
