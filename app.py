@@ -20,7 +20,7 @@ df["data"] = pd.to_datetime(df["data"])
 df["Mês_Acidente"] = df["data"].dt.month
 
 total_mes = df["Mês_Acidente"].value_counts().reset_index()
-#total_mes = total_mes.sort_values(by="index")
+#total_mes = total_mes.sort_values(by="Mês_Acidente")
 
 def main():
 
