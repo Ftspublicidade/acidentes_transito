@@ -43,7 +43,7 @@ def main():
 
 
     fig = px.bar(clima, text=clima.values, color_discrete_sequence=["#FF4500"])
-    fig.update_layout(title="Total de acidentes por Clima", title_x=0.3)
+    fig.update_layout(title="Total de acidentes por Clima", title_x=0.8)
     st.plotly_chart(fig)
 
     fig1 = px.bar(bairro, x="bairro", y="index", text="bairro",
