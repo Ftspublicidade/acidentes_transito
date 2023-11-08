@@ -46,7 +46,7 @@ def main():
     fig.update_layout(title="Total de acidentes por Clima", title_x=0.1)
     st.plotly_chart(fig)
 
-    fig1 = px.bar(bairro, text=bairro.values,
+    fig1 = px.bar(bairro,
              color_discrete_sequence=["#FF4500"], orientation="h")
     fig1.update_layout(title="Top 10 acidentes por Bairro", title_x=0.1)
     st.plotly_chart(fig1)
