@@ -52,7 +52,13 @@ def main():
     st.plotly_chart(fig1)
 
    
-    st.write(total_mes)
+    fig2 = px.line(total_mes, x="Mês_Acidente", y="count",
+              color_discrete_sequence=["#FF4500"], markers=True,
+              text="Total", labels={"Mês":"Mês Acidente", "Total":"Total Acidentes"})
+    fig2.update_layout(title='Total de acidentes por mês', title_x=0.5)
+    fig2.update_traces(textposition='top center')
+
+    st.plotly_chart(fig2)
 
 if __name__ == "__main__":
     main()
