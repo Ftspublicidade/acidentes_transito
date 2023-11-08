@@ -8,7 +8,7 @@ df = pd.read_csv("acidentes2022.csv", on_bad_lines="skip", sep=";")
 df["vitimasfatais"] = df["vitimasfatais"].str.replace(",", ".").astype(float)
 df["vitimas"] = df["vitimas"].str.replace(",", ".").astype(float)
 
-clima = df["tempo_clima"].value_counts().reset_index().rename(columns={"index":"Clima","tempo_clima":"Total"})
+clima = df["tempo_clima"].value_counts().sort_values(ascending=True)
 
 bairro = df["bairro"].value_counts().head(10).reset_index()
 bairro = bairro.sort_values(by="bairro", ascending=True)
@@ -42,7 +42,7 @@ def main():
 
 
 
-    fig = px.bar(clima, x="Clima", y="Total", text="Total", color_discrete_sequence=["#FF4500"])
+    fig = px.bar(clima, text=clima.values, color_discrete_sequence=["#FF4500"])
     fig.update_layout(title="Total de acidentes por Clima", title_x=0.5)
     st.plotly_chart(fig)
 
