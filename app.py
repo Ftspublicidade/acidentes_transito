@@ -34,13 +34,13 @@ def main():
 
     col1, col2, col3 = st.columns(3)
     col1.metric("Total Acidentes🚦", total_acidentes)
-    style_metric_cards(border_left_color="#2b57a4")
+    style_metric_cards(border_left_color="#FF4500")
 
     col2.metric("Total com vítimas🚨", total_com_vitimas)
-    style_metric_cards(border_left_color="#2b57a4")
+    style_metric_cards(border_left_color="#FF4500")
 
     col3.metric("Total vítimas fatais🪦", total_vitimas_fatais)
-    style_metric_cards(border_left_color="#2b57a4")
+    style_metric_cards(border_left_color="#FF4500")
 
 
 
