@@ -36,7 +36,7 @@ def main():
     col1.metric("Total Acidentes🚦", total_acidentes)
     style_metric_cards(border_left_color="#2b57a4")
 
-    col2.metric("Total com vítimas🚨", total_vitimas)
+    col2.metric("Total com vítimas🚨", total_com_vitimas)
     style_metric_cards(border_left_color="#2b57a4")
 
     col3.metric("Total vítimas fatais🪦", total_vitimas_fatais)
