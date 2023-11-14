@@ -32,14 +32,14 @@ def main():
     total_vitimas_fatais = "{:.0f}".format(df["vitimasfatais"].sum())
 
     col1, col2, col3 = st.columns(3)
-    with col1:
-        st.metric("Total Acidentes 🚦", total_acidentes)
+    col1.metric("Total Acidentes🚦", total_acidentes)
+    style_metric_cards(border_left_color="#2b57a4")
 
-    with col2:
-        st.metric("Total com vítimas🚨", total_com_vitimas)
+    col2.metric("Total com vítimas🚨", total_vitimas)
+    style_metric_cards(border_left_color="#2b57a4")
 
-    with col3:
-        st.metric("Total com vítimas fatais🪦", total_vitimas_fatais)
+    col3.metric("Total vítimas fatais🪦", total_vitimas_fatais)
+    style_metric_cards(border_left_color="#2b57a4")
 
 
 
