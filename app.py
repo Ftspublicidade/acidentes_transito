@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+from streamlit_extras.metric_cards import style_metric_cards 
 
 # Lendo a base de dados
 df = pd.read_csv("acidentes2022.csv", on_bad_lines="skip", sep=";")
